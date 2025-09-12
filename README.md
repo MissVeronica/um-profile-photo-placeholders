@@ -20,8 +20,8 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 * {profile_photo_embed_l}
 
 ### Cons of linked images
-* Suffers the same blocking problems as Base64 encoding on most services
-* Requires download from external servers
+* Suffers the same blocking problems as HTML inline embedding on most webmail services
+* Requires download from web hosting/CDN servers
 ### Cons of HTML inline embedding images
 * Can really increase the size of emails
 * Is most likely blocked by default in many webmail services
