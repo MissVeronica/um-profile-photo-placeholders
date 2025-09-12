@@ -5,7 +5,7 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 * Enable inline embedded Photos - Click to HTML inline embed the Profile Photo base64 encoded image {profile_photo_embed_x} for this email template.
 * Enable circular photos - Click to make the Profile photo circular in this email template.
 * Select border width - Select a border width or 0px for no border.
-* Enter border color - Enter border color either HTML color name or HEX code. Default color: white
+* Enter border color - Enter border color either HTML color name or HEX code. Default color: white [W3SCHOOL HTML Color names](https://www.w3schools.com/tags/ref_colornames.asp)
 ## Shortcodes
 * The shortcode suffixes s, m, l for small, medium, large Profile Photos
 * Sizes of the Profile Photos from UM Settings -> General -> Uploads -> "Profile Photo Thumbnail Sizes (px)"
