@@ -27,7 +27,7 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 * Is most likely blocked by default in many webmail services
 * Is blocked completely in Outlook
 ### How to Embed Images in Your Emails
-https://www.twilio.com/en-us/blog/insights/embedding-images-emails-facts
+Twilio guide: https://www.twilio.com/en-us/blog/insights/embedding-images-emails-facts
 ## Translations or Text changes
 * Use the "Say What?" plugin with text domain ultimate-member
 * https://wordpress.org/plugins/say-what/
