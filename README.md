@@ -32,7 +32,7 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 * https://wordpress.org/plugins/say-what/
 
 ## Updates
-None
+* Version 1.1.0 Fix if less than 3 sizes defined for "Profile Photo Thumbnail Sizes (px)"
 
 ## Installation & Updates
 * Install and update by downloading the plugin ZIP file via the green "Code" button
