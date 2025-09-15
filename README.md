@@ -1,5 +1,5 @@
 # UM Profile Photo Placeholders
-Extension to Ultimate Member for six new placeholders creating profile photo links and inline embedded photos with three different sizes in UM notification emails.
+Extension to Ultimate Member for six new placeholders creating profile photo links and inline embedded photos with three different sizes in all UM notification emails.
 ## UM Settings -> Emails -> "Email template"
 * Enable plugin - Click to enable the "Profile Photo Placeholders" plugin for this email template.
 * Enable inline embedded Photos - Click to HTML inline embed the Profile Photo base64 encoded image {profile_photo_embed_x} for this email template.
