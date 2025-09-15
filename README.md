@@ -30,9 +30,12 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 ## Translations or Text changes
 * Use the "Say What?" plugin with text domain ultimate-member
 * https://wordpress.org/plugins/say-what/
-
+## Reference
+* To create new thumbnail sizes with the free UM Extended plugin:
+* https://docs.ultimatemember.com/article/1674-regenerate-cover-profile-photo-thumbnails
 ## Updates
 * Version 1.1.0 Fix if less than 3 sizes defined for "Profile Photo Thumbnail Sizes (px)"
+* Version 1.2.0 Addition of width and height to the img tags
 
 ## Installation & Updates
 * Install and update by downloading the plugin ZIP file via the green "Code" button
