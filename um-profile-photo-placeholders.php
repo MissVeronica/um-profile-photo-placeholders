@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:     Ultimate Member - Profile Photo Placeholders
- * Description:     Extension to Ultimate Member for six new placeholders creating profile photo links and inline embedded photos with three different sizes in UM notification emails.
- * Version:         1.1.0
+ * Description:     Extension to Ultimate Member for six new placeholders creating profile photo links and inline embedded photos with three different sizes in all UM notification emails.
+ * Version:         1.2.0
  * Requires PHP:    7.4
  * Author:          Miss Veronica
  * License:         GPL v2 or later
@@ -112,18 +112,19 @@ class UM_Profile_Photo_Placeholder {
 
             $image_style = ! empty( $image_style ) ? ' style="' . $image_style . '"' : '';
             $image_style .= ' alt="' . esc_html__( 'Profile photo', 'ultimate-member' ) . '"';
+            $image_style .= ' width="##" height="##"';
 
             $image_sizes = array_map( array( $this, 'remove_px' ), UM()->files()->get_profile_photo_size( 'photo_thumb_sizes' ));
             $image_small = $image_sizes[array_key_first( $image_sizes )];
             $data = um_get_user_avatar_data( um_user( 'ID' ), null );
             $sml = 0;
 
-            foreach( $image_sizes as $image_size ) {
+            foreach( $image_sizes as $key => $image_size ) {
 
                 $image_path_sml = str_replace( '.' . $image_type, "-{$image_size}." . $image_type, $image_path );
 
                 if ( file_exists( $image_path_sml )) {
-                    $page_url = '<img src="' . str_replace( $image_small, $image_size, $data['url'] ) . '"' . $image_style . '/>';                
+                    $page_url = '<img src="' . str_replace( $image_small, $image_size, $data['url'] ) . '"' . str_replace( '##', $key, $image_style ) . '/>';                
                 }
 
                 $replace[] = $page_url;
@@ -141,7 +142,7 @@ class UM_Profile_Photo_Placeholder {
                 $image_base64 = '';
                 $sml = 0;
 
-                foreach( $image_sizes as $image_size ) {
+                foreach( $image_sizes as $key => $image_size ) {
 
                     $image_path_sml = str_replace( '.' . $image_type, "-{$image_size}." . $image_type, $image_path );
 
@@ -149,7 +150,7 @@ class UM_Profile_Photo_Placeholder {
 
                         $image_content = file_get_contents( $image_path_sml );
                         if ( $image_content !== false ) {
-                            $image_base64 = '<img src="data:image/' . $image_type . ';base64,' . base64_encode( $image_content ) . '"' . $image_style . '/>';
+                            $image_base64 = '<img src="data:image/' . $image_type . ';base64,' . base64_encode( $image_content ) . '"' . str_replace( '##', $key, $image_style ) . '/>';
                         }
                     }
 
