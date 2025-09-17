@@ -36,6 +36,7 @@ Extension to Ultimate Member for six new placeholders creating profile photo lin
 ## Updates
 * Version 1.1.0 Fix if less than 3 sizes defined for "Profile Photo Thumbnail Sizes (px)"
 * Version 1.2.0 Addition of width and height to the img tags
+* Version 1.2.1 Fix if "Profile Photo Thumbnail Sizes (px)" are saved unsorted by UM.
 
 ## Installation & Updates
 * Install and update by downloading the plugin ZIP file via the green "Code" button
