@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Ultimate Member - Profile Photo Placeholders
  * Description:     Extension to Ultimate Member for six new placeholders creating profile photo links and inline embedded photos with three different sizes in all UM notification emails.
- * Version:         1.2.1
+ * Version:         1.2.2
  * Requires PHP:    7.4
  * Author:          Miss Veronica
  * License:         GPL v2 or later
@@ -197,6 +197,7 @@ class UM_Profile_Photo_Placeholder {
                                     'id'             => $email_key . '_profile_photo_placeholders_header',
                                     'type'           => 'header',
                                     'label'          => $this->get_possible_plugin_update( 'profile_photo_placeholders' ),
+                                    'conditional'    => array( $email_key . '_on', '=', 1 ),
                                 );
 
         $section_fields[] = array(
@@ -204,6 +205,7 @@ class UM_Profile_Photo_Placeholder {
                                     'type'           => 'checkbox',
                                     'label'          => $prefix . esc_html__( 'Enable plugin', 'ultimate-member' ),
                                     'checkbox_label' => esc_html__( 'Click to enable the "Profile Photo Placeholders" plugin for this email template.', 'ultimate-member' ),
+                                    'conditional'    => array( $email_key . '_on', '=', 1 ),
                                 );
 
         $section_fields[] = array(
@@ -250,3 +252,4 @@ class UM_Profile_Photo_Placeholder {
 }
 
 new UM_Profile_Photo_Placeholder();
+
